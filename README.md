@@ -1,5 +1,5 @@
 # M782-Formalization-Project
-Type theory formaliztion project using a proof assistant. Undecided between Agda and LEAN at the moment.
+Type theory formaliztion project using a proof assistant. Unsure if LEAN is better than Agda, but went ahead and converted my whole repository into a LEAN project though because LEAN doesn't know the difference between a project and a repo. 
 
 ## My Topic
 My plan is to formalize categorical limits into type theory. The current end goal is to prove the theorem that if a category has all (finite) products and equalizers, then it has all finite limits. 
