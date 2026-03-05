@@ -3,7 +3,8 @@
   This time, we'll define a category.
 -/
 
-class Category (objects : Type) where
+class MyCategory where
+  objects : Type
   Hom : objects → objects → Type
   comp : (A : objects) → (B : objects) → (C : objects)
           → (Hom A B) → (Hom B C) → Hom A C
@@ -14,13 +15,14 @@ class Category (objects : Type) where
   assoc {A B C D} : ∀ f : Hom A B, ∀ g : Hom B C, ∀ h : Hom C D,
     comp A B D f (comp B C D g h) =  comp A C D (comp A B C f g) h
 
-notation f "∘" g => Category.comp _ _ _ f g
-open Category
+notation f "∘" g => MyCategory.comp _ _ _ g f
+
 
 inductive single where
   | el : single
 
-instance BN : Category ( single ) := {
+instance BN : MyCategory := {
+  objects := single
   Hom := fun A B => Nat
   comp A B C f g := f + g
   id A := 0
