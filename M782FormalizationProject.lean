@@ -1,2 +1,0 @@
-import M782FormalizationProject.class_practice
-import M782FormalizationProject.category
