@@ -5,8 +5,10 @@ Type theory formaliztion project using a proof assistant. Unsure if LEAN is bett
 My plan is to formalize categorical limits into type theory. The current end goal is to prove the theorem that if a category has all (finite) products and equalizers, then it has all finite limits. 
 I will start with formalizing categories and functors, then work my way up. I'm unsure how well the scope of this projects aligns with expectations. Will talk to instructor about it. 
 
-## Initial Brainstorming
-A category is a collection of objects (type? class?) with a function Hom : Obj -> Obj -> Class and a function Comp : (A, B, C) -> Hom(A, B) -> Hom(B, C) -> Hom(A, C) such that axioms. 
-I wonder how best to encode "such that axioms". It's surely incredibly common, so I'll find an example soon whether I seek it out or not. My first guess is that for each axiom, the data of a category should contain an element of the proposition-as-type representing the axiom.
+## Current Questions
+Two things about the agda standard library since familiarization is a goal. 
+1. There's surely some builtin record that does exactly what I want from `ProofIrrelevantSubtype`. Can I have some help finding it?
+2. In `Limits.agda`, I define the proposition `has-unique-term` to mean isomorphic to the unit type. I'm more okay with this not being builtin because it feels like different data than an isomorphism. If there's some variant of `is-contractible`, though, that would probably slot in well here. 
 
-A functor is two functions such that axioms. 
+One thing about your opinion
+3. You seem to prefer Agda over Lean, and I'm curious to hear why. For me, Agda seems to come much more naturally and enjoyably and I can't put my finger on why. I do think I sacrifice some readability though, which is fine. 
